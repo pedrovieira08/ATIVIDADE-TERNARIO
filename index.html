@@ -12,11 +12,23 @@
     */
 
     //ENTRADA
+    const agua = Number(prompt(`informe a despesa da conta de agua`).replace(",","."));
+    const energiaEletrica = Number(prompt(`Informe a despesa da conta de energia eletrica`).replace(",","."));
+    const telefone = Number(prompt(`Informe a despesa da conta de tefone`).replace(",","."));
+    const Supermercado = Number(prompt(`informe a despesa da conta do supermecado`).replace(",","."));
+    const salarioUsuario = Number(prompt(`informe o seu salrio`).replace(",","."));
+    const total = agua + energiaEletrica + telefone + Supermercado;
 
 
     //PROCESSAMENTO
+    let despesaFinal;
 
-    
+    (isNaN(agua) || agua <= 0 || isNaN(energiaEletrica) || energiaEletrica <= 0 ||isNaN (telefone) || telefone < 0 || isNaN(Supermercado) ||Supermercado < 0 || isNaN(salarioUsuario) || salarioUsuario <= 0)?
+     despesaFinal = `Informe um valor valido`: despesaFinal = (salarioUsuario - total> 0)?
+    despesaFinal = `sobraram um total de $${(salarioUsuario - total).toFixed(2)}`: (salarioUsuario - total < 0)?
+     despesaFinal = `faltam um total de $${(salarioUsuario - total).toFixed(2)} para poder pagar todas as contas previstas`: despesaFinal = `Deu a quantia exata das contas`;
+
     //SAÍDA
+    document.write(`${despesaFinal}`);
     
 </script>

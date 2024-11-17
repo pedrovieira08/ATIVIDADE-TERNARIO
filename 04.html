@@ -6,11 +6,14 @@
     */
 
     //ENTRADA
-
+    const caractere = prompt(`informe um caractere`).toUpperCase();
 
     //PROCESSAMENTO
+    let vogal;
+    (caractere === "A" || caractere === "E" || caractere === "I" || caractere === "O" || caractere === "U")? vogal = `O seu caractere é uma vogal.` :vogal = `O seu caractere não é uma vogal.`;
 
     
     //SAÍDA
+    document.write(`${vogal}`);
 
 </script>

@@ -6,11 +6,17 @@
     */
 
     //ENTRADA
+    const num1 = Number(prompt(`ìnforme o primeiro numero inteiro`));
+    const num2 = Number(prompt(`informe o segundo numero inteiro`));
 
 
     //PROCESSAMENTO
+    let maiorInteiro;
+    (isNaN(num1) || isNaN(num2))? maiorInteiro = `informe um numero valido`: maiorInteiro = (num1 > num2)?
+     maiorInteiro = `O maior numero é ${Num1}.` : maiorInteiro = (num2 > num1)? maiorInteiro = `O maior numero é ${num2}.`: maiorInteiro = `os numeros são iguais.`;
 
     
     //SAÍDA
+    document.write(`${maiorInteiro}`)
     
 </script>

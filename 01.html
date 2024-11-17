@@ -11,10 +11,11 @@
    const maiorIdade = 18 - idade;
     //PROCESSAMENTO
     let maior;
-    (idade >= 18) ? maior = `Você já chegou à maioridade.`: maior = `faltam ${maiorIdade} anos para a maior idade.`;
-
+     (isNaN(idade) || idade <= 0) ? maior = `informe um valor valido.`: maior = (idade >= 18) 
+      ? maior = `Você ja chegou na maior idade.` : maior = `faltam ${maiorIdade} anos para chagar a maior idade.`;
     
     //SAÍDA
+
     document.write(`${maior}`);
 
 </script>

@@ -10,11 +10,17 @@
     */
 
     //ENTRADA
+    const precoProduto = Number(prompt(`Informe o preço do produto`));
 
 
     //PROCESSAMENTO
-
+    let preco;
+    (isNaN(precoProduto) || precoProduto <= 0)? preco  = `informe um valor valido.`: preco = (precoProduto <=280)?
+    preco = precoProduto * 1.2 : preco = (precoProduto <= 700)? preco = precoProduto * 1.15: preco =(precoProduto <= 1500)?
+    preco = precoProduto * 1.1 : preco = precoProduto * 1.05;
     
     //SAÍDA
+
+    (typeof preco === "string")? document.write(preco) : document.write(`O produto, após o cálculo de aumento, ficou R$${preco.toFixed(2)}.`);
 
 </script>

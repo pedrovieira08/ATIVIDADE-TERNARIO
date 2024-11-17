@@ -8,11 +8,18 @@
     */
 
     //ENTRADA
+    const gasolina = Number(prompt(`Informe o preço do litro do combustivel`));
+    const litrosGastos = Number(prompt(`Informe a quantidade de litros que utiliza para se deslocar ao trabalho diariamente`));
+    const transportePubli =Number(prompt(`informe o preço do transporte publico para se deslocar ao trabalho diariamente`));
 
 
     //PROCESSAMENTO
-
+    let custoBeneficio;
+    (isNaN(gasolina) || gasolina <=0 || isNaN(litrosGastos) || litrosGastos <= 0 || isNaN(transportePubli) || transportePubli <=0)?
+    custoBeneficio = `informe um valor valido`:custoBeneficio= (gasolina * litrosGastos > transportePubli)?
+    custoBeneficio = `O transporte mais barato é o transporte publico`: custoBeneficio = `O transporte mais barato é seu veiculo`;
     
     //SAÍDA
+    document.write(`${custoBeneficio}.`);
     
 </script>

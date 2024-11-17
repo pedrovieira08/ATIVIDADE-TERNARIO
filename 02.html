@@ -6,11 +6,14 @@
     */
 
     //ENTRADA
-
-
+    const ano = Number(prompt(`ìnforme em que ano você nasceu.`));
+    const anoAtual =2024;
+    
     //PROCESSAMENTO
-
+    let anoEleicao;
+      (isNaN(ano) || ano <= 0)  ? anoEleicao =`Informe um ano válido.` : anoEleicao = ((anoAtual - ano) >= 16) 
+        ? anoEleicao = `Você pode votar neste ano.` :  anoEleicao = `Você não poderá votar neste ano.`;
     
     //SAÍDA
-
+    document.write(`${anoEleicao}`);
 </script>

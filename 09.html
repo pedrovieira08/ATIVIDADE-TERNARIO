@@ -10,11 +10,21 @@
     */
 
   //ENTRADA
-
+  
+  const horasTrabalhadas = Number(prompt(`informe a quantidade de horas trabalhadas semanalmente`).replace(",","."));
+  const recebeHoras = Number(prompt(`informe quanto que recebe por hora`).replace(",","."));
 
     //PROCESSAMENTO
+    let salarioFinal;
+    (isNaN(horasTrabalhadas)|| horasTrabalhadas <= 0 || isNaN(recebeHoras) || recebeHoras <= 0)?
+    salarioFinal = `informe um valoir valido`:(horasTrabalhadas <= 45)? salarioFinal = (horasTrabalhadas * recebeHoras ):
+    (horasTrabalhadas <= 60) ? salarioFinal =  (horasTrabalhadas * recebeHoras) *1.2: salarioFinal = (horasTrabalhadas * recebeHoras) * 1.3;
 
+    let horasTrabalhadasaumento = salarioFinal / horasTrabalhadas;
     
     //SAÍDA
+
+    
+    (typeof salarioFinal === "string")? document.write(salarioFinal) :document.write(`O salário final recebido pelo funcionario semanalmente é $${(salarioFinal).toFixed(2)} e preço de cada hora trabalhada é $${(horasTrabalhadasaumento).toFixed(2)}`);
 
 </script>
